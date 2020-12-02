@@ -15,6 +15,7 @@
         command:
           - configure terminal
           - interface Gi0/33
-          - description Test
+          - shut
+          - no shut
           - end
           - exit
