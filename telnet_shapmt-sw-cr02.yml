@@ -11,12 +11,14 @@
         user: "{{ cred.username }}"
         password: "{{ cred.password }}"
         login_prompt: "Username: "
-        pause: 3
+        pause: 1
         prompts:
           - "[#]"
         command:
           - configure terminal
           - interface Gi0/38
+          - shut
+          - shut
           - shut
           - no shut
           - end
