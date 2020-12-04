@@ -2,19 +2,23 @@
 - hosts: shachpmt-sw-cr25
   gather_facts: false
   connection: local
+  vars_files:
+    - /root/ansibleCRED/cred.yml
   
   tasks:      
     - name: send configuration commands to Switch
       telnet:
-        user: testadmin
-        password: test01rrd
+        user: "{{ cred.username }}"
+        password: "{{ cred.password }}"
         login_prompt: "Username: "
-        pause: 3
+        pause: 1
         prompts:
           - "[#]"
         command:
           - configure terminal
           - interface Gi0/33
+          - shut
+          - shut
           - shut
           - no shut
           - end
