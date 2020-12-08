@@ -1,0 +1,30 @@
+---
+- hosts: shamfg-sw-cr25
+  gather_facts: false
+  connection: local
+  vars_files:
+    - /root/ansibleCRED/cred.yml
+  
+  tasks:      
+    - name: send configuration commands to Switch
+      telnet:
+        user: "{{ cred.username }}"
+        password: "{{ cred.password }}"
+        login_prompt: "Username: "
+        pause: 1
+        prompts:
+          - "[#]"
+        command:
+          - configure terminal
+          - interface Fa0/16
+          - shut
+          - shut
+          - shut
+          - no shut
+          - interface Fa0/2
+          - shut
+          - shut
+          - shut
+          - no shut
+          - end
+          - exit
