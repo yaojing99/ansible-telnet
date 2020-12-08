@@ -1,0 +1,45 @@
+---
+- hosts: chdmfg-sw-ar10
+  gather_facts: false
+  connection: local
+  vars_files:
+    - /root/ansibleCRED/cred.yml
+  
+  tasks:      
+    - name: send configuration commands to Switch
+      telnet:
+        user: "{{ cred.username }}"
+        password: "{{ cred.password }}"
+        login_prompt: "Username: "
+        pause: 1
+        prompts:
+          - "[#]"
+        command:
+          - configure terminal
+          - interface Gi0/20
+          - shut
+          - shut
+          - shut
+          - no shut
+          - interface Gi0/45
+          - shut
+          - shut
+          - shut
+          - no shut
+          - interface Gi0/8
+          - shut
+          - shut
+          - shut
+          - no shut
+          - interface Gi0/47
+          - shut
+          - shut
+          - shut
+          - no shut
+          - interface Gi0/4
+          - shut
+          - shut
+          - shut
+          - no shut
+          - end
+          - exit
