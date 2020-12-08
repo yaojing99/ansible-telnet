@@ -16,7 +16,7 @@
           - "[#]"
         command:
           - configure terminal
-          - interface Gi0/33
+          - interface G0/45
           - shut
           - shut
           - shut
