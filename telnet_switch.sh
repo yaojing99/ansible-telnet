@@ -14,7 +14,6 @@ ansible-playbook -i hosts --vault-password-file /root/ansibleCRED/vault-password
 ansible-playbook -i hosts --vault-password-file /root/ansibleCRED/vault-password-file telnet_shachpmt-sw-cr22.yml &&
 ansible-playbook -i hosts --vault-password-file /root/ansibleCRED/vault-password-file telnet_shachpmt-sw-cr23.yml &&
 ansible-playbook -i hosts --vault-password-file /root/ansibleCRED/vault-password-file telnet_shachpmt-sw-cr24.yml &&
-ansible-playbook -i hosts --vault-password-file /root/ansibleCRED/vault-password-file telnet_shachpmt-sw-cr25.yml &&
 ansible-playbook -i hosts --vault-password-file /root/ansibleCRED/vault-password-file telnet_shachpmt-sw-cr26.yml &&
 ansible-playbook -i hosts --vault-password-file /root/ansibleCRED/vault-password-file telnet_shachpmt-sw-cr27.yml &&
 ansible-playbook -i hosts --vault-password-file /root/ansibleCRED/vault-password-file telnet_shachpmt-sw-cr29.yml &&
